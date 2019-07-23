@@ -1,0 +1,6 @@
+/.idea/
+/project/target/
+/project/project/*
+parameters.conf
+target/
+.DS_Store
