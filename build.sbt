@@ -60,3 +60,16 @@ lazy val datadogTesting = module("datadog-testing", 8080)
     "io.opentracing" % "opentracing-api" % Versions.openTracing,
     "io.opentracing" % "opentracing-util" % Versions.openTracing
   ))
+
+lazy val newRelicTesting = module("newrelic-testing", 8080)
+  .settings(libraryDependencies ++= List(
+    "com.newrelic.agent.java" % "newrelic-api" % Versions.newRelic
+  ))
+  .enablePlugins(NewRelic)
+  .settings(
+    newrelicAppName := "newrelic-testing",
+    newrelicVersion := "5.2.0",
+    newrelicLicenseKey := sys.env.get("NEWRELIC_LICENSE"),
+    newrelicCustomTracing := true,
+    newrelicFuturesAsSegments := true
+  )
