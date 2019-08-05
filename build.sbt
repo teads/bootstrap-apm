@@ -58,7 +58,8 @@ lazy val datadogTesting = module("datadog-testing", 8080)
   .settings(libraryDependencies ++= List(
     "com.datadoghq" % "dd-trace-api" % Versions.datadog,
     "io.opentracing" % "opentracing-api" % Versions.openTracing,
-    "io.opentracing" % "opentracing-util" % Versions.openTracing
+    "io.opentracing" % "opentracing-util" % Versions.openTracing,
+    "io.opentracing.contrib" %% "opentracing-scala-concurrent" % Versions.openTracingConcurrent
   ))
 
 lazy val newRelicTesting = module("newrelic-testing", 8080)

@@ -5,5 +5,6 @@ object Versions {
   val datadog = "0.31.0"
   val newRelic = "5.2.0"
   val openTracing = "0.31.0"
+  val openTracingConcurrent = "0.0.4"
 
 }
